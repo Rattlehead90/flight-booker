@@ -1,24 +1,12 @@
-# README
+# Gist 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app simulates the basic functions of a flight-booking app.
 
-Things you may want to cover:
+A typical airline booking flow:
 
-* Ruby version
+- Enter desired dates / airports and click “Search”
+- Choose from among a list of available flights
+- Enter passenger information for all passengers
+- Enter billing information
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+See more at (https://www.theodinproject.com/lessons/ruby-on-rails-flight-booker)
