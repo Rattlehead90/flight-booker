@@ -10,3 +10,4 @@ airports = Airport.create([{ code: 'LHR' }, { code: 'IST' }, { code: 'CDG' },
                            { code: 'AMS' }, { code: 'FRA' }, { code: 'MAD' },
                            { code: 'BCN' }, { code: 'LGW' }, { code: 'MUC' },
                            { code: 'FCO' }])
+
