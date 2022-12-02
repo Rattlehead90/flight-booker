@@ -1,8 +1,2 @@
-<%= form_with url: "/flights", method: :get do |form| %>
-  <%= form.select(:departure_airport_id, options_for_select(@airports), include_blank: 'City of Departure') %>
-  <%= form.select(:arrival_airport_id, options_for_select(@airports), include_blank: 'Destination') %>
-  <%= form.select(:passangers_num, options_for_select([['1', 1], ['2', 2], ['3', 3], ['4', 4]]), 
-                  include_blank: 'Number of Passangers') %>
-  <%= form.select(:start_datetime, options_for_select(@dates), include_blank: 'Date of Flight') %>
-  <%= form.submit "Search", class: "btn-main" %>
-<% end %>
+<h1 class="text-4xl text-center mb-8" >Where to, mein irisch Kind?..</h1>
+<%= render 'search' %>
