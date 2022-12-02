@@ -5,7 +5,7 @@ class Flight < ApplicationRecord
   validates :duration, presence: true
 
   validate :check_arrival_and_departure
-  
+
   def check_arrival_and_departure
     errors.add(:arrival_airport, "can't be the same as the departure") if :arrival_airport == :departure_airport
   end
