@@ -1,2 +1,7 @@
 <h1 class="text-4xl text-center mb-8" >Where to, mein irisch Kind?..</h1>
 <%= render 'search' %>
+<ul>
+  <%= @flights.each do |flight| %>
+  <li><%= flight.id %></li>
+  <% end %>
+</ul>
