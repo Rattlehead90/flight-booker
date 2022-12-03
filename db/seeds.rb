@@ -6,10 +6,11 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-airports = Airport.create([{ code: 'LHR' }, { code: 'IST' }, { code: 'CDG' }, 
-                           { code: 'AMS' }, { code: 'FRA' }, { code: 'MAD' },
-                           { code: 'BCN' }, { code: 'LGW' }, { code: 'MUC' },
-                           { code: 'FCO' }])
+airports = Airport.create([{ code: 'LHR', city: 'London' }, { code: 'IST', city: 'Istambul' }, 
+                           { code: 'CDG', city: 'Paris' }, { code: 'AMS', city: 'Amsterdam' }, 
+                           { code: 'FRA', city: 'Frankfurt am Main' }, { code: 'MAD', city: 'Madrid' },
+                           { code: 'BCN', city: 'Barcelona'}, { code: 'LGW', city: 'Gatwick' }, 
+                           { code: 'MUC', city: 'Munich' }, { code: 'FCO', city: 'Rome' }])
 
 flights_data = []
 10.times do |l|
