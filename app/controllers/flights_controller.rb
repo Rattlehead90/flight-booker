@@ -1,7 +1,7 @@
 class FlightsController < ApplicationController
   def index
     @airports = Airport.all.map { |a| [ a.city, a.id ] }
-    @dates = Flight.pluck(:start_datetime).uniq
+    @dates = Flight.pluck(:start_datetime).map { |d| d.to_date }.uniq
                    .map { |d| [ d.strftime("%d/%m/%Y"), d ] }
     
     @flights = Flight.where(

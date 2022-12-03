@@ -12,12 +12,14 @@ airports = Airport.create([{ code: 'LHR' }, { code: 'IST' }, { code: 'CDG' },
                            { code: 'FCO' }])
 
 flights_data = []
-10.times do |i|
-  10.times do |j|
-    flights_data << { departure_airport_id: i+1, arrival_airport_id: j+1,
-                start_datetime: "2022/12/#{j+10} 1#{j}:00:00", duration: "0#{j}:10" }
-    flights_data << { departure_airport_id: j+1, arrival_airport_id: i+1,
-                start_datetime: "2022/12/#{j+10} 1#{j}:00:00", duration: "0#{j}:10" }
+10.times do |l|
+  10.times do |i|
+    10.times do |j|
+      flights_data << { departure_airport_id: i+1, arrival_airport_id: j+1,
+                  start_datetime: "2022/12/#{l+10} 10:00:00", duration: "02:10" }
+      flights_data << { departure_airport_id: j+1, arrival_airport_id: i+1,
+                  start_datetime: "2022/12/#{l+10} 20:00:00", duration: "03:10" }
+    end
   end
 end
 
