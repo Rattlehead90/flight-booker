@@ -10,5 +10,4 @@ class FlightsController < ApplicationController
       start_datetime: params[:start_datetime]
     )
   end
-
 end
