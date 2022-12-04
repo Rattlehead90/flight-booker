@@ -19,7 +19,7 @@ flights_data = []
       flights_data << { departure_airport_id: i + 1, arrival_airport_id: j + 1,
                         start_date: "2022/12/#{l + 10}", start_time: '10:00:00', duration: '02:10' }
       flights_data << { departure_airport_id: j + 1, arrival_airport_id: i + 1,
-                        start_datetime: "2022/12/#{l + 10}", start_time: '20:00:00', duration: '03:10' }
+                        start_date: "2022/12/#{l + 10}", start_time: '20:00:00', duration: '03:10' }
     end
   end
 end
