@@ -5,7 +5,7 @@
         <li class="p-4 bg-gray-50 flex justify-around ">
           <div>From: <%= flight.departure_airport.code %></div>
           <div>To: <%= flight.arrival_airport.code %></div>
-          <div>At: <%= flight.start_date.hour %>:00</div>
+          <div>At: <%= flight.start_time.strftime("%H:%M") %></div>
         </li>
       <% end %>
     </ul>
