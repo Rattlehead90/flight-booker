@@ -3,11 +3,11 @@
 one:
   departure_airport_id: 1
   arrival_airport_id: 1
-  start_datetime: 2022-12-01 20:37:44
+  start_date: 2022-12-01 20:37:44
   duration: 2022-12-01 20:37:44
 
 two:
   departure_airport_id: 1
   arrival_airport_id: 1
-  start_datetime: 2022-12-01 20:37:44
+  start_date: 2022-12-01 20:37:44
   duration: 2022-12-01 20:37:44

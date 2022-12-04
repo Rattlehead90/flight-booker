@@ -3,7 +3,7 @@ require "test_helper"
 class FlightTest < ActiveSupport::TestCase
   def setup
     @flight = Flight.new(arrival_airport: Airport.first, departure_airport: Airport.second, 
-                         start_datetime: '11/11/1111 11:11', duration: '04:00')
+                         start_date: '11/11/1111', start_time: '11:11', duration: '04:00')
   end
 
   test 'should not save flights without departure airports' do
@@ -16,8 +16,13 @@ class FlightTest < ActiveSupport::TestCase
     assert_not @flight.valid?
   end
 
-  test 'should not save flights without datetime' do
-    @flight.start_datetime = ''
+  test 'should not save flights without date' do
+    @flight.start_date = ''
+    assert_not @flight.valid?
+  end
+
+  test 'should not save flights without time' do
+    @flight.start_time = ''
     assert_not @flight.valid?
   end
 

@@ -2,7 +2,8 @@ class Flight < ApplicationRecord
   # Validations for the seeding of the database
   validates :arrival_airport_id, presence: true
   validates :departure_airport_id, presence: true
-  validates :start_datetime, presence: true
+  validates :start_date, presence: true
+  validates :start_time, presence: true
   validates :duration, presence: true
 
   validate :check_arrival_and_departure

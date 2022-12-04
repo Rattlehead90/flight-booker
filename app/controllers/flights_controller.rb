@@ -1,7 +1,7 @@
 class FlightsController < ApplicationController
   def index
     @airports = Airport.all.map { |a| [a.city, a.id] }
-    @dates = Flight.pluck(:start_datetime).map { |d| d.to_date }.uniq
+    @dates = Flight.pluck(:start_date).uniq
                    .map { |d| [d.strftime('%d/%m/%Y'), d] }
     @flight = Flight.new
 
@@ -11,6 +11,6 @@ class FlightsController < ApplicationController
   private
 
     def search_params
-      params.require(:flight).permit(:departure_airport_id, :arrival_airport_id, :start_datetime)
+      params.require(:flight).permit(:departure_airport_id, :arrival_airport_id, :start_date)
     end
 end
