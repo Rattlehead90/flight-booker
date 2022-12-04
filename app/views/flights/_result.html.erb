@@ -1,0 +1,13 @@
+<div class="w-3/6 self-center mt-8" >
+  <% unless @flights.nil? %>
+    <ul class="flex flex-col gap-4">
+      <% @flights.each do |flight| %>
+        <li class="p-4 bg-gray-50 flex justify-around ">
+          <div>From: <%= flight.departure_airport.code %></div>
+          <div>To: <%= flight.arrival_airport.code %></div>
+          <div>At: <%= flight.start_datetime.hour %>:00</div>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>

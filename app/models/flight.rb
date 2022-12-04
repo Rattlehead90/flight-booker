@@ -8,7 +8,9 @@ class Flight < ApplicationRecord
   validate :check_arrival_and_departure
 
   def check_arrival_and_departure
-    errors.add(:arrival_airport_id, "can't be the same as the departure") if self.arrival_airport == self.departure_airport
+    if self.arrival_airport == self.departure_airport
+      errors.add(:arrival_airport_id, "can't be the same as the departure")
+    end
   end
 
   # Associations
@@ -18,5 +20,4 @@ class Flight < ApplicationRecord
                                foreign_key: 'arrival_airport_id'
 
   # Querying logic
-
 end
