@@ -3,15 +3,14 @@ class FlightsController < ApplicationController
     @airports = Airport.all.map { |a| [a.city, a.id] }
     @dates = Flight.pluck(:start_datetime).map { |d| d.to_date }.uniq
                    .map { |d| [d.strftime('%d/%m/%Y'), d] }
+    @flight = Flight.new
 
-    return if params[:flight].nil?
-
-    @flights = Flight.where(search_params)
+    @flights = Flight.where(search_params) unless params[:flight].nil?
   end
 
   private
 
     def search_params
-      params.require(:flight).permit(:departure_airport_id, :arrival_airport_id, params[:start_datetime].to_date.beginning_of_day..params[:start_datetime].to_date.end_of_day)
+      params.require(:flight).permit(:departure_airport_id, :arrival_airport_id, :start_datetime)
     end
 end
