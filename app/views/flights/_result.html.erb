@@ -2,7 +2,8 @@
   <% unless @flights.nil? %>
     <ul class="flex flex-col gap-4">
       <% @flights.each do |flight| %>
-        <li class="p-4 bg-gray-50 flex justify-around ">
+        <li class="p-4 bg-gray-50 flex justify-around">
+          <div><%= radio_button_tag(:flight, flight.id) %></div>
           <div>From: <%= flight.departure_airport.code %></div>
           <div>To: <%= flight.arrival_airport.code %></div>
           <div>At: <%= flight.start_time.strftime("%H:%M") %></div>
