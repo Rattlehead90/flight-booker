@@ -1,5 +1,3 @@
-
-
 <%= form_with model: @flight, class: "flex justify-center gap-4", method: :get do |form| %>
   <%= form.select(:departure_airport_id, options_for_select(@airports), include_blank: 'City of Departure') %>
   <%= form.select(:arrival_airport_id, options_for_select(@airports), include_blank: 'Destination') %>
