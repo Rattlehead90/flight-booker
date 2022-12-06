@@ -1,17 +1,18 @@
 <div class="w-3/6 self-center mt-8" >
   <% unless @flights.nil? %>
-    <%= form_with model: @booking, url: bookings_new_path, method: :get%>
+    <%= form_with model: @booking, url: bookings_new_path, method: :get do |form| %>
       <ul class="flex flex-col gap-4">
         <% @flights.each do |flight| %>
+          <% form.hidden_field :passengers_num, params[:flight][:passengers_num] %>
           <li class="p-4 bg-gray-50 flex justify-around">
-            <div><%= radio_button_tag(:flight, flight.id) %></div>
+            <div><%= form.radio_button(:flight, flight.id) %></div>
             <div>From: <%= flight.departure_airport.code %></div>
             <div>To: <%= flight.arrival_airport.code %></div>
             <div>At: <%= flight.start_time.strftime("%H:%M") %></div>
           </li>
         <% end %>
       </ul>
-      <%= button_to 'Book the Tickets', bookings_new_path, class: "btn-main w-full mt-4 hover:bg-gradient-to-r from-cyan-500 to-blue-500 hover:font-bold transition" %>
-    
+      <%= form.submit 'Book the Tickets', class: "btn-main w-full mt-4 hover:bg-gradient-to-r from-cyan-500 to-blue-500 hover:font-bold transition" %>
+      <% end %>
   <% end %>
 </div>

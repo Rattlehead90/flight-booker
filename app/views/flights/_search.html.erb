@@ -1,7 +1,7 @@
 <%= form_with model: @flight, class: "flex justify-center gap-4", method: :get do |form| %>
   <%= form.select(:departure_airport_id, options_for_select(@airports), include_blank: 'City of Departure') %>
   <%= form.select(:arrival_airport_id, options_for_select(@airports), include_blank: 'Destination') %>
-  <%= form.select(:passangers_num, options_for_select([['1', 1], ['2', 2], ['3', 3], ['4', 4]]), 
+  <%= form.select(:passengers_num, options_for_select([['1', 1], ['2', 2], ['3', 3], ['4', 4]]), 
                   include_blank: 'Number of Passangers') %>
   <%= form.select(:start_date, options_for_select(@dates), include_blank: 'Date of Flight') %>
   <%= form.submit "Search", class: "btn-main" %>
