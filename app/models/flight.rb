@@ -19,6 +19,8 @@ class Flight < ApplicationRecord
                                  foreign_key: 'departure_airport_id'
   belongs_to :arrival_airport, class_name: 'Airport',
                                foreign_key: 'arrival_airport_id'
+  has_many :bookings, foreign_key: :flight_id
+  has_many :passengers, through: :bookings, source: :passenger
 
   # Querying logic
 end
