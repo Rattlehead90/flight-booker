@@ -8,6 +8,10 @@
   .btn-main {
     @apply p-2 bg-sky-300 rounded-lg hover:bg-sky-500 hover:text-white w-24 hover:cursor-pointer;
   }
+
+  .header {
+    @apply text-4xl text-center mb-8 font-bold;
+  }
 }
 
 
