@@ -3,9 +3,11 @@
     <%= form_with model: @booking, url: bookings_new_path, method: :get do |form| %>
       <ul class="flex flex-col gap-4">
         <% @flights.each do |flight| %>
-          <% form.hidden_field :passengers_num, params[:flight][:passengers_num] %>
+
+          <% hidden_field_tag :passengers_num, params[:flight][:passengers_num] %>
+
           <li class="p-4 bg-gray-50 flex justify-around">
-            <div><%= form.radio_button(:flight, flight.id) %></div>
+            <div><%= form.radio_button(:flight, flight.id, required: true) %></div>
             <div>From: <%= flight.departure_airport.code %></div>
             <div>To: <%= flight.arrival_airport.code %></div>
             <div>At: <%= flight.start_time.strftime("%H:%M") %></div>
