@@ -9,8 +9,20 @@
     @apply p-2 bg-sky-300 rounded-lg hover:bg-sky-500 hover:text-white w-24 hover:cursor-pointer;
   }
 
+  .btn-main-grad {
+    @apply p-2 bg-sky-300 rounded-lg hover:bg-sky-500 hover:text-white hover:cursor-pointer w-full mt-4 hover:bg-gradient-to-r from-cyan-500 to-blue-500 hover:font-bold transition;
+  }
+
   .header {
     @apply text-4xl text-center mb-8 font-bold;
+  }
+
+  .label-text {
+    @apply font-medium text-gray-800 border-gray-500 m-1;
+  }
+
+  .form-row {
+    @apply flex justify-center gap-4 mt-2;
   }
 }
 
