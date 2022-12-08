@@ -1,1 +1,24 @@
 <h2 class="header">Personal Details for the Passengers</h2>
+<%= form_with model: @booking, local: true do |booking_form| %>
+  <div>
+    <%= booking_form.fields_for :passengers do |form| %>
+      <div>
+        <%= form.label :name, 'Name:' %>
+        <%= form.text_field :name %>
+    
+        <%= form.label :last_name, 'Last Name:' %>
+        <%= form.text_field :last_name %>
+        <%= form.label :email, 'Email:' %>
+        <%= form.text_field :email %>
+        <%= form.label :passport_num, 'Passport Number' %>
+        <%= form.text_field :passport_num %>
+      </div>
+    <% end %>
+  </div>
+
+  <%= booking_form.hidden_field :flight_id, value: params[:flight] %>
+
+  <%= booking_form.submit 'Purchase Ticket', class: 'btn-main' %>
+
+<% end %>
+

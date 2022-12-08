@@ -1,4 +1,4 @@
 class Passenger < ApplicationRecord
-  has_many :bookings, foreign_key: :passenger_id
+  belongs_to :bookings
   has_many :flights, through: :bookings
 end
