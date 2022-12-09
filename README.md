@@ -12,5 +12,5 @@ A typical airline booking flow:
 See more at (https://www.theodinproject.com/lessons/ruby-on-rails-flight-booker)
 
 # Demo
-![](https://github.com/Rattlehead90/flight-booker/flight-booker-demo.gif)
+![](https://github.com/Rattlehead90/flight-booker/blob/main/flight-booker-demo.gif)
 
