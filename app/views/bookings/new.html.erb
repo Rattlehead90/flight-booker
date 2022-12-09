@@ -5,22 +5,22 @@
       <div class="form-row">
         <div class="flex flex-col">
           <%= form.label :name, 'Name:', class: "label-text" %>
-          <%= form.text_field :name %>
+          <%= form.text_field :name, required: true %>
         </div>
     
         <div class="flex flex-col">
           <%= form.label :last_name, 'Last Name:', class: "label-text" %>
-          <%= form.text_field :last_name %>
+          <%= form.text_field :last_name, required: true %>
         </div>
 
         <div class="flex flex-col">
           <%= form.label :email, 'Email:', class: "label-text" %>
-          <%= form.text_field :email %>
+          <%= form.text_field :email, required: true %>
         </div>
 
         <div class="flex flex-col">
           <%= form.label :passport_num, 'Passport Number', class: "label-text" %>
-          <%= form.text_field :passport_num %>
+          <%= form.text_field :passport_num, required: true %>
         </div>
       </div>
     <% end %>

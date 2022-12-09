@@ -1,6 +1,6 @@
 class Booking < ApplicationRecord
   validates :flight_id, presence: true
-  # validates_associated :passengers
+  validates_associated :passengers
 
   has_many :passengers
   belongs_to :flight
