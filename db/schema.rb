@@ -35,10 +35,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_08_184723) do
   end
 
   create_table "passengers", force: :cascade do |t|
-    t.string "name"
-    t.string "last_name"
-    t.string "email"
-    t.string "passport_num"
+    t.string "name", null: false
+    t.string "last_name", null: false
+    t.string "email", null: false
+    t.string "passport_num", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "booking_id"
