@@ -1,5 +1,5 @@
 <div class="w-3/6 self-center mt-8" >
-  <% unless @flights.nil? %>
+  <% unless @flights.nil? || !@flights.any? %>
     <%= form_with model: @booking, url: new_booking_path, method: :get do |form| %>
       <ul class="flex flex-col gap-4">
         <% @flights.each do |flight| %>
