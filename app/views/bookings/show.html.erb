@@ -1,3 +1,18 @@
-<div>
-  <%= @booking.passengers.name %>
+<h2 class="header">Your Trip Information</h2>
+<div class="flex flex-col self-center gap-4">
+  <% @booking.passengers.each do |passenger| %>
+    <div class='border-4 w-[720px] p-4 flex justify-between'>
+      <div class="flex flex-col justify-between">
+        <p class="font-extrabold text-4xl"><%= @booking.flight.departure_airport.code %> - <%= @booking.flight.arrival_airport.code %> </p>
+        <p class="flex align-middle gap-4 font-bold"><%= @booking.flight.departure_airport.city %> -
+                                            <%= image_tag 'plane', class: "w-6" %>
+                                          - <%= @booking.flight.arrival_airport.city %></p>
+        <p class="font-extralight">Flight duration: <%= @booking.flight.duration.strftime('%H:%M') %></p>
+        <p>Passenger: <%= passenger.name.upcase %> <%= passenger.last_name.upcase %></p>
+      </div>
+      <div>
+        <%= image_tag 'barcode.gif' %>
+      </div>
+    </div>
+  <% end %>
 </div>
