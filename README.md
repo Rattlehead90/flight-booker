@@ -10,3 +10,7 @@ A typical airline booking flow:
 - Enter billing information 💶
 
 See more at (https://www.theodinproject.com/lessons/ruby-on-rails-flight-booker)
+
+# Demo
+![](https://github.com/Rattlehead90/flight-booker/flight-booker-demo.gif)
+
